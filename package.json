@@ -10,16 +10,24 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:sorter.helloWorld"
+		"onCommand:sorter.dev"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "sorter.helloWorld",
-				"title": "Hello World"
+				"command": "sorter.dev",
+				"title": "DEV > sorter"
 			}
-		]
+		],
+		"menus": {
+			"editor/context": [
+			  {
+				"command": "sorter.dev",
+				"group": "YourGroup@1"
+			  }
+			]
+		  }
 	},
 	"scripts": {
 		"lint": "eslint .",
